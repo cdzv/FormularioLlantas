@@ -33,6 +33,7 @@ jQuery(document).ready(function ($) {
         visibility: "visible",
         position: "relative",
       });
+      $("#form-vehicle select").val(null).trigger('change');
     } else {
       $("#form-vehicle").css({
         visibility: "visible",
@@ -42,6 +43,7 @@ jQuery(document).ready(function ($) {
         visibility: "hidden",
         position: "absolute",
       });
+      $("#form-dimension select").val(null).trigger('change');
     }
   });
 
@@ -109,6 +111,6 @@ jQuery(document).ready(function ($) {
   initializeSelect2("#line", "line_search", "Línea", "mark,year");
   initializeSelect2("#version", "version_search", "Versión", "mark,year,line");
   initializeSelect2("#width", "width_search", "Ancho");
-  initializeSelect2("#ratio", "ratio_search", "Perfil");
-  initializeSelect2("#rim", "rim_search", "Rin");
+  initializeSelect2("#ratio", "ratio_search", "Perfil", "width");
+  initializeSelect2("#rim", "rim_search", "Rin", "width,ratio");
 });
